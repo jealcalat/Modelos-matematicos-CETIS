@@ -11,7 +11,7 @@ format:
     urlcolor: blue
     slide-level: 1
     # colortheme: UBCblue
-    incremental: true
+    incremental: false
     section-titles: true
     include-in-header: 
       text: |
@@ -67,8 +67,8 @@ Slides, datos y código en Github: [Modelos matemáticos](https://github.com/jea
 11:00 - 12:00 & 60 min & Sección 3, Parte II: El Proceso de Modelación \\ \hline
 12:00 - 12:20 & 20 min & Receso Principal \\ \hline
 12:20 - 13:20 & 60 min & Sección 4, Parte I: Fundamentos de Modelos probabilísticos \\ \hline
-13:20 - 14:20 & 60 min & Sección 4, Parte II: Ajuste e Interpretación \\ \hline
-14:20 - 14:25 & 5 min  & Receso \\ \hline
+13:20 - 13:25 & 5 min  & Receso \\ \hline
+13:25 - 14:25 & 60 min & Sección 4, Parte II: Ajuste e Interpretación \\ \hline
 14:25 - 15:00 & 35 min & Cierre, Preguntas y Discusión Final \\ \hline
 \end{tabular}
 \end{table}
@@ -576,7 +576,7 @@ P_empirical = p(years)
 
 # Gráfico
 plt.style.use('seaborn-v0_8-whitegrid')
-fig = plt.figure(figsize=(8, 4))
+fig = plt.figure(figsize=(8, 3.8))
 ax = fig.add_subplot(111)
 
 ax.plot(years, P_discrete, 'o--', label='1. Discreto (Crecimiento simple)', color='skyblue', alpha=0.8)
@@ -884,7 +884,7 @@ for segundo_actual in range(TIEMPO_SIMULACION):
 
 # --- Visualización de Resultados ---
 plt.style.use('seaborn-v0_8-whitegrid')
-fig, ax = plt.subplots(figsize=(10, 5))
+fig, ax = plt.subplots(figsize=(10, 4))
 ax.step(range(TIEMPO_SIMULACION), historial_cola, where='post')
 ax.set_title("Evolución de la Cola (Modelo Estocástico)")
 ax.set_xlabel("Tiempo (segundos)")
